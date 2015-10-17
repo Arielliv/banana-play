@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Assets.at(path="/public/view",file="index.html")
+
+# Map static resources from the /public folder to the /assets URL path
+GET  /public/*file        controllers.Assets.at(path="/public", file)
+
+GET /app/controllers/UsersServices/:UserName          controllers.UsersController.getUser(UserName)
+GET /app/controllers/UsersServices/users          controllers.UsersController.getUsers()
+POST /app/controllers/UsersServices/users          controllers.UsersController.addUser(UserName,FirstName,LastName,Password)
+PUT /app/controllers/UsersServices/user          controllers.UsersController.addUser(UserName,FirstName,LastName,Password)
+DELETE /app/controllers/UsersServices/:UserName         controllers.UsersController.DelUser(UserName)

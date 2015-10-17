@@ -1,0 +1,55 @@
+package controllers;
+
+import play.*;
+import play.mvc.*;
+
+import views.html.*;
+
+import javax.xml.transform.Result;
+import java.lang.String;
+import java.util.List;
+
+public class UsersServices extends Controller {
+    private List <User> Users;
+    private int count = 0;
+
+    public void AddUser(String UserName,String FirstName,String LastName,String Password){
+        String name = "user" + count;
+        count++;
+        new User name = new user(UserName,FirstName,LastName,Password);
+        Users.add(name);
+    }
+
+    public void DelUser(String UserName){
+        for (int i;i < Users.size();i++){
+            if(Users.get(i).getUserName == UserName){
+                Users.remove(i);
+                break;
+            }
+        }
+    }
+
+    public User getUser(String UserName){
+        for (user x : Users){
+            if(x.getUserName == UserName){
+                return x;
+                break;
+            }
+        }
+    }
+
+    public String userExists(String UserName){
+        String flag = "User doesn't exists..."
+        for (int i;i < Users.size();i++){
+            if(Users.get(i).getUserName == UserName){
+                flag = "User exists!"
+                break;
+            }
+        }
+        return flag;
+    }
+
+    public List<user> getUsers(){
+        return Users;
+    }
+}

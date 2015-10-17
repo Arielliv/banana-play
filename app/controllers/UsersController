@@ -1,0 +1,13 @@
+package controllers;
+
+import play.*;
+import play.mvc.*;
+
+import views.html.*;
+
+import javax.xml.transform.Result;
+import java.lang.String;
+
+public class UserController extends Controller {
+
+}

@@ -13,3 +13,4 @@ GET /app/controllers/UsersServices/users          controllers.UsersController.ge
 POST /app/controllers/UsersServices/users          controllers.UsersController.addUser(UserName,FirstName,LastName,Password)
 PUT /app/controllers/UsersServices/user          controllers.UsersController.addUser(UserName,FirstName,LastName,Password)
 DELETE /app/controllers/UsersServices/:UserName         controllers.UsersController.DelUser(UserName)
+DELETE /app/controllers/UsersServices/:UserName         controllers.UsersController.DelUser(UserName)
